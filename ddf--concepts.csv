@@ -1,0 +1,10 @@
+﻿concept,concept_type,name
+governorate,entity_domain,Governorate
+name,string,Name
+avg_hh,measure,Average Household Size
+illiteracy,measure,Illiteracy
+population,measure,Population
+year,time,Year
+region,entity_domain,Region
+illiteracy_rate,measure,Illiteracy Rate
+shape_lores_svg,string,Low resolution SVG shape

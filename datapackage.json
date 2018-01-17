@@ -1,0 +1,255 @@
+{
+  "name": "pcbs course test",
+  "title": "pcbs course test",
+  "description": "",
+  "version": "0.0.1",
+  "language": {
+    "id": "en",
+    "name": "English"
+  },
+  "translations": [],
+  "license": "",
+  "author": "",
+  "resources": [
+    {
+      "path": "ddf--concepts.csv",
+      "name": "ddf--concepts",
+      "schema": {
+        "fields": [
+          {
+            "name": "concept"
+          },
+          {
+            "name": "concept_type"
+          },
+          {
+            "name": "name"
+          }
+        ],
+        "primaryKey": "concept"
+      }
+    },
+    {
+      "path": "ddf--datapoints--avg_hh--by--governorate--year.csv",
+      "name": "avg_hh--by--governorate--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "governorate"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "avg_hh"
+          }
+        ],
+        "primaryKey": [
+          "governorate",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--illiteracy--by--governorate--year.csv",
+      "name": "illiteracy--by--governorate--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "governorate"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "illiteracy"
+          }
+        ],
+        "primaryKey": [
+          "governorate",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--illiteracy_rate--by--governorate--year.csv",
+      "name": "illiteracy_rate--by--governorate--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "governorate"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "illiteracy_rate"
+          }
+        ],
+        "primaryKey": [
+          "governorate",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--population--by--governorate--year.csv",
+      "name": "population--by--governorate--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "governorate"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "population"
+          }
+        ],
+        "primaryKey": [
+          "governorate",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--entities--governorate.csv",
+      "name": "governorate",
+      "schema": {
+        "fields": [
+          {
+            "name": "governorate"
+          },
+          {
+            "name": "name"
+          },
+          {
+            "name": "region"
+          }
+        ],
+        "primaryKey": "governorate"
+      }
+    },
+    {
+      "path": "ddf--entities--region.csv",
+      "name": "region",
+      "schema": {
+        "fields": [
+          {
+            "name": "region"
+          },
+          {
+            "name": "name"
+          },
+          {
+            "name": "shape_lores_svg"
+          }
+        ],
+        "primaryKey": "region"
+      }
+    }
+  ],
+  "ddfSchema": {
+    "datapoints": [
+      {
+        "primaryKey": [
+          "governorate",
+          "year"
+        ],
+        "value": "avg_hh",
+        "resources": [
+          "avg_hh--by--governorate--year"
+        ]
+      },
+      {
+        "primaryKey": [
+          "governorate",
+          "year"
+        ],
+        "value": "illiteracy",
+        "resources": [
+          "illiteracy--by--governorate--year"
+        ]
+      },
+      {
+        "primaryKey": [
+          "governorate",
+          "year"
+        ],
+        "value": "illiteracy_rate",
+        "resources": [
+          "illiteracy_rate--by--governorate--year"
+        ]
+      },
+      {
+        "primaryKey": [
+          "governorate",
+          "year"
+        ],
+        "value": "population",
+        "resources": [
+          "population--by--governorate--year"
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "primaryKey": [
+          "governorate"
+        ],
+        "value": "name",
+        "resources": [
+          "governorate"
+        ]
+      },
+      {
+        "primaryKey": [
+          "governorate"
+        ],
+        "value": "region",
+        "resources": [
+          "governorate"
+        ]
+      },
+      {
+        "primaryKey": [
+          "region"
+        ],
+        "value": "name",
+        "resources": [
+          "region"
+        ]
+      },
+      {
+        "primaryKey": [
+          "region"
+        ],
+        "value": "shape_lores_svg",
+        "resources": [
+          "region"
+        ]
+      }
+    ],
+    "concepts": [
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "concept_type",
+        "resources": [
+          "ddf--concepts"
+        ]
+      },
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "name",
+        "resources": [
+          "ddf--concepts"
+        ]
+      }
+    ]
+  }
+}
